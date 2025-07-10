@@ -29,3 +29,24 @@ const user: User = {
     age: 23,
     houseName: "11-7"
 };
+
+type Person={
+    name:string;
+}
+type Employee=Person & {
+    employeeId:number;
+}
+const employee:Employee={
+    name:"s",
+    employeeId:1
+}
+
+type Props={
+    name:string
+} & ({
+    gender:"male",
+    salary:number
+} | {
+    gender:"female",
+    weight:number
+})
